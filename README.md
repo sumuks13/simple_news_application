@@ -4,6 +4,6 @@ A multi-tenant java application that utilizes a scheduler to concurrently gather
 
 ### References:
 
-Multi-Tenancy - https://medium.com/swlh/multi-tenancy-implementation-using-spring-boot-hibernate-6a8e3ecb251a </br>
-News API - https://newsapi.org/docs/endpoints/top-headlines
+- [Multi-Tenancy](https://medium.com/swlh/multi-tenancy-implementation-using-spring-boot-hibernate-6a8e3ecb251a)
+- [News API](https://newsapi.org/docs/endpoints/top-headlines)
 
