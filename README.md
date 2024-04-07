@@ -1,1 +1,3 @@
-# simple_news_application
+# Simple News Application
+
+A multi-tenant java application that utilizes a scheduler to concurrently gather and store news from news API.
