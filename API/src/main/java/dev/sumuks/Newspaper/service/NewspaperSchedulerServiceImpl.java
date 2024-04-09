@@ -27,9 +27,6 @@ public class NewspaperSchedulerServiceImpl implements NewspaperSchedulerService 
     String apiKey;
 
     @Autowired
-    WebClient.Builder webClientBuilder;
-
-    @Autowired
     NewsRepository newsRepository;
 
     @Override
@@ -42,7 +39,7 @@ public class NewspaperSchedulerServiceImpl implements NewspaperSchedulerService 
                 .build()
                 .toUriString();
 
-        WebClient webClient = webClientBuilder.baseUrl(url).build();
+        WebClient webClient = WebClient.builder().baseUrl(url).build();
         List<Articles> articles = webClient.get()
                 .header("X-Api-Key", apiKey)
                 .accept(MediaType.APPLICATION_JSON)
@@ -58,6 +55,7 @@ public class NewspaperSchedulerServiceImpl implements NewspaperSchedulerService 
             news.setCategory(category);
             newsList.add(news);
         }
+        log.info("" + newsList.size());
         return newsList;
     }
 
